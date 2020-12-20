@@ -1,0 +1,55 @@
+/* 변수 선언해서 불러서 쓸 수 있도록 함 */
+:root{
+    /* color */
+    --white-color: #ffffff;
+    --black-color: #140a00;
+    --blue-color: #045fd4;
+    --red-color: #ff0000;
+    --grey-dark-color: #909090;
+    --gray-light-color: #e0e0e0;
+    /* size */
+    --padding : 12px;
+    --avatar-size : 36px;
+
+    /* font-size */
+    --font-large : 20px;
+    --font-medium : 14px;
+    --font-small : 12px;
+    --font-micro : 10px;
+}
+
+/* 전체 선택자 : 모든 형태의 모든 요소를 선택한다. */
+*{
+    padding : 0;
+    margin : 0;
+    box-sizing: border-box;  
+    /* 테두리를 기준으로 크기를 정한다. */
+}
+
+/* body의 기본글꼴을 정한다. */
+body{
+    font-family : Roboto;
+}
+
+/* header */
+header{
+    display : flex; /*여러줄을 한줄로 만들어준다*/
+    justify-content: space-between; /*양쪽 끝으로 정렬해준다*/
+    padding : var(--padding);
+    background-color: var(--black-color);
+    color : var(--white-color);
+}
+
+.logo {
+    font-size: var(--font-large);
+}
+
+.logo i {
+    color : var(--red-color);
+}
+
+.icons .fa-search{
+    margin-right: var(--padding);
+}
+
+/* video */
