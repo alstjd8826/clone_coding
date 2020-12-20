@@ -31,6 +31,16 @@ body{
     font-family : Roboto;
 }
 
+ul{
+    list-style: none; /* ul의 앞에 아이콘 모양 없앰*/
+}
+
+button,
+button:focus {
+    border:none;
+    cursor: pointer;
+    outline : none;
+}
 /* header */
 header{
     display : flex; /*여러줄을 한줄로 만들어준다*/
@@ -52,4 +62,51 @@ header{
     margin-right: var(--padding);
 }
 
-/* video */
+.player{
+    position : sticky; /* 스크롤 내려도 고정 */
+    top : 0; /* 고정위치를 고정해줘야함*/
+    text-align: center; /* 중앙배치 */
+    background-color: var(--black-color);
+}
+/* video player 왜 위로 커질까...*/
+.player iframe {
+    width : 100%;
+    height : 100;
+    max-width: 1000px;
+}
+
+.info {
+    padding : var(--padding);
+}
+
+.info .metadata .hashtags {
+    display : flex;
+    font-size: var(--font-small);
+    color: var(--blue-color);
+}
+
+.info .metadata .hashtags li{
+    margin-right: var(--padding);
+}
+
+.info .metadata .titleAndButton {
+    display: flex;
+}
+
+.info .metadata .titleAndButton .title {
+    font-size:  var(--font-medium);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;/* css line clamp : 컨텐츠 내용을 제한 하는 것, 2줄로 제한*/
+    margin-right: var(--padding);
+}
+
+.info .metadata .titleAndButton .moreBtn {
+    height: 100%; /*morebtn 아이콘 을 위로 올림*/
+}
+
+.info .views {
+    font-size: var(--font-small);
+    color: var(--grey-dark-color);
+}
